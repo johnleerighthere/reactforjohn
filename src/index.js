@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Apps from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+const user = {
+  firstName: 'John',
+  lastName: 'Lee'
+}
+
+function display(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const element = (<h1>Hello, {display(user)}!</h1>)
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <Apps />
+  // </React.StrictMode>,
+  element,
   document.getElementById('root')
 );
 
